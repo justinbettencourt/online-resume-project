@@ -95,66 +95,54 @@ var projects = {
         "dates": "October 2015 - May 2016",
         "description": "Build your own real estate or interior design empire based on the hit TV series Love It or List It! In Love It or List It: The Game, you decide whether to renovate and redecorate your client’s current house, or find them their new dream home. Play as real estate agent and you must choose the right neighbourhood, outbid other agents and perform inspections to present the perfect house that meets all of your clients’ “must-haves”. Play as designer and your job is to renovate and redesign your clients’ current home to convince them to “love it”.",
         "platform": "iOS, Android, Facebook",
-        "images": [{
-            "image": "images/197x148.gif"
-        }, {
-            "image": "images/197x148.gif"
-        }]
+        "images": [
+            "images/197x148.gif", "images/197x148.gif"
+        ]
     }, {
         "title": "The Moblees - Yellow Bear Studios",
         "role": "3D Generalist",
         "dates": "October 2015 - May 2016",
         "description": "The Moblees app is a second-screen experience that syncs with The Moblees TV show in real time, inspiring preschoolers to get up and Moblee moving! The app puts your child in the world of Terra Mova and lets you record them moving along with their favourite Moblees characters in their own personal Appisode.",
         "platform": "iOS",
-        "images": [{
-            "image": "images/197x148.gif"
-        }, {
-            "image": "images/197x148.gif"
-        }]
+        "images": [
+            "images/197x148.gif", "images/197x148.gif"
+        ]
     }, {
         "title": "Hydra Demo - Sulon Technologies",
         "role": "2D/3D Generalist & Technical Artist",
         "dates": "November 2014 - March 2015",
         "description": "Hydra was a game demo created for the Sulon Cortex. It was created to show gamers and developers that the product can create intriguing and and interesting user experiences. With this demo, users experience an adventure within a cave filled with lava. Upon following a spirit guide, the players walk across an unstable bridge and must use their magical abilities to get around the obstacles. Upon reaching a main platform, a Hydra rises from the lava and you enter a large battle sequence where you must fire your ice and fire magic o kill the Hydra.",
         "platform": "The Sulon Cortex",
-        "images": [{
-            "image": "images/197x148.gif"
-        }, {
-            "image": "images/197x148.gif"
-        }]
+        "images": [
+            "images/197x148.gif", "images/197x148.gif"
+        ]
     }, {
         "title": "Engine Demo - Sulon Technologies",
         "role": "2D/3D Generalist & Technical Artist",
         "dates": "October 2014 - January 2015",
         "description": "The Engine Demo was a showcasing demo created for the Sulon Cortex. It was created to virtually showcase products and the technical aspects of an object in AR and VR. With this specific demo, users will experience a V8 car engine in the middle of the room. By doing a simple hand gesture, users could then changed the engine from a compact form, to an exploded form with individual parts floating around the room. Users could then walk around and see each individual part of the V8 engine up close. Once done, repeating the gesture will move all the parts back into the compacted engine.",
         "platform": "The Sulon Cortex",
-        "images": [{
-            "image": "images/197x148.gif"
-        }, {
-            "image": "images/197x148.gif"
-        }]
+        "images": [
+            "images/197x148.gif", "images/197x148.gif"
+        ]
     }, {
         "title": "Quasar - Oscine Games",
         "role": "Game Designer, 2D Artist & Programmer",
         "dates": "60 Hours",
         "description": "Quasar is a small Android game created by two game developers during a game jam, and was created in less than 60 hours. This is the first game published under Oscine Games.",
         "platform": "Android",
-        "images": [{
-            "image": "images/197x148.gif"
-        }, {
-            "image": "images/197x148.gif"
-        }]
+        "images": [
+            "images/197x148.gif", "images/197x148.gif"
+        ]
     }, {
         "title": "Stringer: Afghanistan - George Brown College",
         "role": "3D Artist",
         "dates": "June 2013 - December 2013",
         "description": "Stringer is an immersive journalism first person video game that places you in the middle of an Afghanistan battlefield armed with only a video camera and a first aid kit. The player uses a virtual camera to film events as they unfold in the game. The first aid kit in the game teaches the player how to stop severe bleeding using a tourniquet, ETD, and a gauze. This serious game is intended to be used to teach freelance journalists lifesaving techniques to treat themselves and their colleagues while working in combat zones. The combat medical procedures in this serious game were created in collaboration with Wilderness Medical Associates International. This project was created with Unity3D enhanced with cinematic 3D tools created by Cinema Suite. The game uses the Oculus Rift VR headset and the Razer Hydra controller to bring a deeper level of immersion to the player.",
         "platform": "Windows, OSX",
-        "images": [{
-            "image": "images/197x148.gif"
-        }, {
-            "image": "images/197x148.gif"
-        }]
+        "images": [
+            "images/197x148.gif", "images/197x148.gif"
+        ]
     }],
     "display": function() {
         $("#projects").append(HTMLprojectStart);
@@ -170,7 +158,7 @@ var projects = {
             $("#projects").append(formattedPlatform);
 
             project.images.forEach(function(image) {
-                var formattedImages = HTMLprojectImage.replace(data, image.image);
+                var formattedImages = HTMLprojectImage.replace(data, image);
                 $("#projects").append(formattedImages);
             });
 
@@ -185,14 +173,18 @@ var education = {
         "name": "George Brown College",
         "location": "Toronto, Ontario",
         "degree": "Advanced Diploma",
-        "majors": "Game Development & 3D Modeling",
+        "majors": [
+            "Game Development", " 3D Modeling"
+        ],
         "dates": "2010 - 2013",
         "url": "http://www.georgebrown.ca/"
     }],
     "onlineCourses": [{
         "title": "Nanodegree",
         "school": "Udacity",
-        "majors": "Front-End Web Development",
+        "majors": [
+            "Front-End Web Development"
+        ],
         "dates": "October 2016 - Present",
         "url": "https://www.udacity.com"
     }],
@@ -207,7 +199,6 @@ var education = {
 
             var formattedLocation = HTMLschoolLocation.replace(data, education.location);
             $("#education").append(formattedLocation);
-
 
             var formattedDates = HTMLschoolDates.replace(data, education.dates);
             $("#education").append(formattedDates);
